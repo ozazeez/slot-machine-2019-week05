@@ -1,0 +1,29 @@
+.slots{
+    display: flex;
+    gap: 4%;
+    justify-content: center;
+    padding-left: 100px;
+}
+html{
+    font-family: "zilla slab";
+}
+h1{
+    text-align: center;
+}
+body{
+    background-color: lightgray;
+}
+#bets{
+    display: flex;
+    gap: 4%;
+    justify-content: center;
+}
+
+h2{
+text-align: center;
+}
+
+.bal{
+    text-align: center;
+    margin-top: 50px;
+}
