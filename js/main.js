@@ -1,5 +1,9 @@
-const minBet = 5;
-const maxBet = 25;
+// what can they do
+// what do they expect 
+// what do they see 
+
+const minBet = 1;
+const maxBet = 5;
 let wallet = 100;
 
 document.querySelector('#min').addEventListener('click', spinMin);
@@ -18,13 +22,15 @@ function spinMin() {
     if (slot1 === slot2 && slot2 === slot3) {
         wallet = wallet + (minBet * 2);
         document.querySelector('#wallet').innerText = wallet;
-
+        alert("YAY! You won $2.00!")
     }
     else {
         wallet = wallet - minBet;
         document.querySelector('#wallet').innerText = wallet;
     }
-
+    if (wallet <= 0) {
+        alert("OH NO! Your wallet balance is gone.")
+    }
 }
 
 function spinMax() {
@@ -36,15 +42,15 @@ function spinMax() {
     document.querySelector('#slot3').innerHTML = slot3;
 
     if (slot1 === slot2 && slot2 === slot3) {
-        wallet = wallet + (maxBet * 2);
+        wallet = wallet + (maxBet * 1.5);
         document.querySelector('#wallet').innerText = wallet;
+        alert("YAY! You won $7.50!")
     }
     else {
         wallet = wallet - maxBet;
         document.querySelector('#wallet').innerText = wallet;
     }
-
+    if (wallet <= 0) {
+        alert("OH NO! Your wallet balance is gone.")
+    }
 }
-
-
-
